@@ -92,6 +92,13 @@
 #define CONFIG_INITRD_TAG
 #define CONFIG_CMDLINE_EDITING
 
+/* USB EHCI */
+#define CONFIG_CMD_USB
+#define CONFIG_USB_EHCI
+#define CONFIG_USB_EHCI_SUNXI
+#define CONFIG_SYS_USB_EHCI_MAX_ROOT_PORTS 1
+#define CONFIG_USB_STORAGE
+
 /* mmc config */
 /* Can't use MMC slot 0 if the UART is directed there */
 #if !defined CONFIG_UART0_PORT_F || CONFIG_MMC_SUNXI_SLOT != 0

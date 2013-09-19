@@ -33,6 +33,8 @@
 #define CONFIG_SYS_PROMPT		"sun4i# "
 #define CONFIG_MACH_TYPE		4104
 
+#define CONFIG_USB_MAX_CONTROLLER_COUNT	2
+
 /*
  * Include common sunxi configuration where most the settings are
  */
