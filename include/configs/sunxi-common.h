@@ -99,6 +99,10 @@
 #define CONFIG_SYS_USB_EHCI_MAX_ROOT_PORTS 1
 #define CONFIG_USB_STORAGE
 
+/* USB Host Networking */
+#define CONFIG_USB_HOST_ETHER
+#define CONFIG_USB_ETHER_ASIX
+
 /* mmc config */
 /* Can't use MMC slot 0 if the UART is directed there */
 #if !defined CONFIG_UART0_PORT_F || CONFIG_MMC_SUNXI_SLOT != 0
@@ -349,8 +353,6 @@
 #endif
 
 #undef CONFIG_CMD_FPGA
-#undef CONFIG_CMD_NET
-#undef CONFIG_CMD_NFS
 
 /* I2C */
 #define CONFIG_SPL_I2C_SUPPORT
@@ -430,7 +432,6 @@
 #ifdef CONFIG_SUNXI_EMAC
 #define CONFIG_MII			/* MII PHY management		*/
 #define CONFIG_CMD_MII
-#define CONFIG_CMD_NET
 #endif
 
 #ifdef CONFIG_CMD_NET
