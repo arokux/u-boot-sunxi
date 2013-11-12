@@ -143,6 +143,14 @@ int cpu_eth_init(bd_t *bis)
 {
 	sunxi_emac_initialize(bis);
 
+
 	return 0;
 }
 #endif
+
+int cpu_eth_init(bd_t *bis)
+{
+	gmac_initialize(bis);
+
+	return 0;
+}

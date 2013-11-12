@@ -29,7 +29,8 @@
 #define RX_BUF2_ADDR		0x44A03000
 #define MAX_BUF_LEN			0x000007FF
 
-#define GMAC_BASE			0x01c30000	/* aw1633: 0x01c30000  aw1630: 0x01c50000 */
+//#define GMAC_BASE			0x01c30000	/* aw1633: 0x01c30000  aw1630: 0x01c50000 */
+#define GMAC_BASE			0x01c50000	/* aw1633: 0x01c30000  aw1630: 0x01c50000 */
 #define GMAC_CONTROL		(0x00) /* Configuration */
 #define GMAC_FRAME_FILTER	(0x04) /* Frame Filter */
 #define GMAC_HASH_HIGH		(0x08) /* Multicast Hash Table High */
@@ -169,8 +170,8 @@
 
 #endif
 
-#define AHB1_GATING			(0x60)
-#define GMAC_AHB_BIT		0x00000200
+#define AHB1_GATING			(0x64)
+#define GMAC_AHB_BIT		(1 << 17)
 
 /* PHY address */
 #define PHY_ADDR			0x01

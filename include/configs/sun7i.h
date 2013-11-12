@@ -43,4 +43,6 @@
  */
 #include <configs/sunxi-common.h>
 
+#undef CONFIG_SUNXI_EMAC 
+
 #endif /* __CONFIG_H */

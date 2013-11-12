@@ -321,9 +321,15 @@ static int gmac_sys_init(void)
 	u32 reg_val;
 
 	/* configure PIOA for gmac */
+	/* 
 	writel(0x22222222, PA_CFG0);
 	writel(0x22222222, PA_CFG1);
 	writel(0x22222222, PA_CFG2);
+	*/
+
+	writel(0x55555555, PA_CFG0);
+	writel(0x50555505, PA_CFG1);
+        writel(0x00000005, PA_CFG2);
 
 	/* enalbe clk for gmac */
 	reg_val = readl(CCMU_BASE + AHB1_GATING);

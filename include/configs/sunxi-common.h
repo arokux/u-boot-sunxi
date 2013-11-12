@@ -420,10 +420,11 @@
 #endif
 
 /* Ethernet support */
-#ifdef CONFIG_SUNXI_EMAC
+#ifdef CONFIG_SUN6I_GMAC
 #define CONFIG_MII			/* MII PHY management		*/
 #define CONFIG_CMD_MII
 #define CONFIG_CMD_NET
+#define CONFIG_NET_MULTI
 #endif
 
 #ifdef CONFIG_CMD_NET
